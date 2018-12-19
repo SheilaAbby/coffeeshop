@@ -1,27 +1,20 @@
 from django.shortcuts import render
+from .models import Menus
+from.models import Orders
 
 # Create your views here.
 
 
 def home(request):
-    return render(request, 'home.html')
 
 
-def contact(request):
-    return render(request, 'contact.html')
+   menus = Menus.objects.all()[:5] # get the first 10 menus
 
+   context = {
+     'menus': menus
+   }
 
-def galary(request):
-    return render(request, 'galary.html')
-
-
-def menus(request):
-    return render(request, 'menus.html')
-
-
-def order(request):
-    return render(request, 'order.html')
-
+   return render(request, 'home.html', context)
 
 
 

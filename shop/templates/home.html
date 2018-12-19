@@ -43,7 +43,7 @@
               <a class="nav-link js-scroll-trigger" href="#menu">Menu</a>
             </li>
               <li class="nav-item">
-              <a class="nav-link" href="#">Admin</a>
+              <a class="nav-link" href="/admin">Admin <small>login</small></a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -111,34 +111,18 @@
       </div>
       <div class="container">
         <div class="row">
+
+          {% for menu in menus %}
           <div class="col-lg-3 col-md-6 text-center">
             <div class="service-box mt-5 mx-auto">
               <i class="fas fa-4x fa-gem text-primary mb-3 sr-icon-1"></i>
-              <h3 class="mb-3">Coffee a</h3>
-              <p class="text-muted mb-0">Description</p>
+              <h3 class="mb-3">{{menu.coffee_name}}</h3>
+              <p class="text-muted mb-0">{{menu.description}}</p>
+              <h>${{menu.price}}</h>
             </div>
           </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-paper-plane text-primary mb-3 sr-icon-2"></i>
-              <h3 class="mb-3">Coffee b</h3>
-              <p class="text-muted mb-0">Description</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-code text-primary mb-3 sr-icon-3"></i>
-              <h3 class="mb-3">Coffee b</h3>
-              <p class="text-muted mb-0">Description</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 text-center">
-            <div class="service-box mt-5 mx-auto">
-              <i class="fas fa-4x fa-heart text-primary mb-3 sr-icon-4"></i>
-              <h3 class="mb-3">Coffee b</h3>
-              <p class="text-muted mb-0">Description</p>
-            </div>
-          </div>
+          {% endfor %}
+
         </div>
       </div>
     </section>
