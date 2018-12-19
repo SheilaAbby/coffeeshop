@@ -4,23 +4,23 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'shop/home.html')
+    return render(request, 'home.html')
 
 
 def contact(request):
-    return render(request, 'shop/contact.html')
+    return render(request, 'contact.html')
 
 
 def galary(request):
-    return render(request, 'shop/galary.html')
+    return render(request, 'galary.html')
 
 
 def menus(request):
-    return render(request, 'shop/menus.html')
+    return render(request, 'menus.html')
 
 
 def order(request):
-    return render(request, 'shop/order.html')
+    return render(request, 'order.html')
 
 
 

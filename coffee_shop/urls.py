@@ -1,6 +1,7 @@
 
 from django.conf.urls import url, include
 from django.contrib import admin
+from shop import views as v
 
 
 urlpatterns = [
@@ -8,9 +9,20 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # home page url
-    url(r'^$', include('shop.urls.home')),
-    url(r'^menus/', include('shop.urls.menus')),
-    url(r'^galary/', include('shop.urls.galary')),
-    url(r'^order/', include('shop.urls')),
-    url(r'^contact/', include('shop.urls')),
+    url(r'^$', v.home),
+
+    # Contact us page url
+    url(r'^contact/', v.contact),
+
+    #  galary page url
+
+    url(r'^galary/', v.galary),
+
+    #  menus page url
+
+    url(r'^menus/', v.menus),
+
+    # make order page url
+
+    url(r'^order/', v.order),
 ]
