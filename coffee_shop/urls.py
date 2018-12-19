@@ -2,6 +2,7 @@
 from django.conf.urls import url, include
 from django.contrib import admin
 from shop import views as v
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 
 urlpatterns = [
@@ -26,3 +27,8 @@ urlpatterns = [
 
     url(r'^order/', v.order),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+
+
+
