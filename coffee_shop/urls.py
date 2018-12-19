@@ -4,9 +4,13 @@ from django.contrib import admin
 
 
 urlpatterns = [
+    # admin page url
     url(r'^admin/', admin.site.urls),
-    url(r'^menus/', include('menus.urls')),
-    url(r'^galary/', include('coffeegalary.urls')),
-    url(r'^order/', include('orders.urls')),
-    url(r'^contact/', include('contactus.urls')),
+
+    # home page url
+    url(r'^$', include('shop.urls.home')),
+    url(r'^menus/', include('shop.urls.menus')),
+    url(r'^galary/', include('shop.urls.galary')),
+    url(r'^order/', include('shop.urls')),
+    url(r'^contact/', include('shop.urls')),
 ]
