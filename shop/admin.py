@@ -7,3 +7,5 @@ from .models import Orders
 admin.site.register(Menus)
 
 admin.site.register(Orders)
+
+admin.site.site_header = 'Coffee Shop - Admin'
