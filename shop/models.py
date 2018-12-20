@@ -15,18 +15,24 @@ class Menus(models.Model):
 
     class Meta:
         verbose_name_plural = 'menus'
+
+    # defines the string to be used on the admin page
+    def __str__(self):
+        return '%s' % self.coffee_name
 # will create a database table called orders
 
 
 class Orders(models.Model):
-    customer_name = models.CharField(max_length=20)
-    customer_email = models.CharField(max_length=200)
-    customer_address = models.CharField(max_length=50)
-    order_description = models.TextField()
+    customer_name = models.CharField(max_length=20, blank=False)
+    customer_email = models.CharField(max_length=200, blank=False)
+    customer_address = models.CharField(max_length=50, blank=False)
+    order_description = models.TextField(blank=False)
     created_at = models.DateTimeField(default=datetime.now, blank=True)
 
     class Meta:
         verbose_name_plural = 'orders'
 
-
+    # defines the string to be used on the admin page
+    def __str__(self):
+        return '%s' % self.customer_name
 

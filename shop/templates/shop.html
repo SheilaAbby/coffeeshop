@@ -76,16 +76,40 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">We've got the coffee you love!</h2>
             <hr class="light my-4">
+
                       <div class="card">
                       <h5 class="card-header">Lets you quickly order <br> your favourite coffee</h5>
-                      <div class="card-body">
 
+                      <div class="card-body">
+                            <div class="form-group">
+                                {% if messages %}
+                                <ul class="messages">
+                                    {% for message in messages %}
+                                    <li>
+                                        <div class="alert alert-success">{{ message }}</div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </div>
+                          <div>
                             <form method="POST" action="">
                               {% csrf_token %}
-                              {{ form }}
+                              <p><label for="customer_name">Customer Name</label>
+                                  <input type="text" name="customer_name" value="">
+                              </p>
+                                <p><label for="customer_email">Customer Email</label>
+                                  <input type="text" name="customer_email" value="">
+                              </p>
+                                <p><label for="customer_address">Customer Address</label>
+                                  <input type="text" name="customer_address" value="">
+                              </p>
+                                <p><label for="order_description">Describe your Order</label>
+                                  <input type="text" name="order_description" value="">
+                              </p>
                            <button type="submit" class="btn btn-primary">Order</button>
                             </form>
-                        
+                          </div>
 
                       </div>
                     </div>

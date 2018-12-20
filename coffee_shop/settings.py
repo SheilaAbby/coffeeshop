@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'shop',  # this is the app we are building
+
 ]
 
 MIDDLEWARE = [
