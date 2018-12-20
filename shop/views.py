@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Menus
-from.models import Orders
+
 
 # Create your views here.
 

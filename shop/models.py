@@ -10,7 +10,7 @@ class Menus(models.Model):
     coffee_name = models.CharField(max_length=200)
     description = models.TextField()
     price = models.DecimalField(max_digits=5, decimal_places=2, default=0)
-    coffee_image = models.FileField(upload_to='coffee_images', blank=True)
+    coffee_image = models.FileField(blank=True)
     created_at = models.DateTimeField(default=datetime.now, blank=True)
 
     class Meta:
