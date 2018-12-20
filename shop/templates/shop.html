@@ -79,18 +79,13 @@
                       <div class="card">
                       <h5 class="card-header">Lets you quickly order <br> your favourite coffee</h5>
                       <div class="card-body">
-                            <form>
-                              <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                              </div>
-                              <div class="form-group">
-                                <label>Describe your order</label>
-                                <input type="text" class="form-control"  placeholder="Tell us about your order">
-                              </div>
 
-                      <button type="submit" class="btn btn-primary">Order</button>
+                            <form method="POST" action="">
+                              {% csrf_token %}
+                              {{ form }}
+                           <button type="submit" class="btn btn-primary">Order</button>
                             </form>
+                        
 
                       </div>
                     </div>
